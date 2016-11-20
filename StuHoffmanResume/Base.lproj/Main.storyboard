@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StuHoffmanResume" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stu" translatesAutoresizingMaskIntoConstraints="NO" id="ehN-Pz-1rx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="cut-rp-eMS"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujd-18-CoC" userLabel="HeartBtn">
+                                <rect key="frame" x="230" y="570" width="95" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="5Io-M0-naX"/>
+                                    <constraint firstAttribute="width" constant="95" id="v3O-GL-jrP"/>
+                                </constraints>
+                                <state key="normal" image="Heart"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npp-7f-0TB" userLabel="LightbulbBtn">
+                                <rect key="frame" x="101" y="48" width="95" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="FIS-aQ-3aF"/>
+                                    <constraint firstAttribute="width" constant="95" id="jCX-kT-qTU"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.6705882352941176" blue="0.0" alpha="0.0" colorSpace="deviceRGB"/>
+                                <state key="normal" image="Lightbulb"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ax-Xg-yRb" userLabel="SpeechBtn">
+                                <rect key="frame" x="212" y="239" width="177" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="6Yh-NZ-EZQ"/>
+                                    <constraint firstAttribute="height" constant="140" id="ZYl-05-mBk"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="50" height="50"/>
+                                <state key="normal" image="speech-bubble-md"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFn-LH-j2J" userLabel="pressMeButton">
+                                <rect key="frame" x="277" y="20" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Press Me">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressMePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fr8-aw-gAn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6ax-Xg-yRb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6Yr-fg-4xz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ehN-Pz-1rx" secondAttribute="bottom" id="BBY-FS-3U0"/>
+                            <constraint firstItem="Npp-7f-0TB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="Ejl-01-Hsx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ujd-18-CoC" secondAttribute="bottom" constant="8" id="Ikj-MH-GhB"/>
+                            <constraint firstAttribute="trailing" secondItem="ehN-Pz-1rx" secondAttribute="trailing" id="KQ4-fp-F1z"/>
+                            <constraint firstItem="ehN-Pz-1rx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="N8E-Md-o7i"/>
+                            <constraint firstItem="ehN-Pz-1rx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rrm-vG-st6"/>
+                            <constraint firstItem="ehN-Pz-1rx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eA4-Z5-4xq"/>
+                            <constraint firstAttribute="trailing" secondItem="ehN-Pz-1rx" secondAttribute="trailing" id="wyd-Qo-Uam"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Heart" width="1969" height="1829"/>
+        <image name="Lightbulb" width="708" height="1119"/>
+        <image name="Stu" width="960" height="1280"/>
+        <image name="speech-bubble-md" width="298" height="267"/>
+    </resources>
 </document>
